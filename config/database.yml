@@ -3,24 +3,18 @@ development:
   encoding: unicode
   database: buildybuild_development
   pool: 5
-  username: buildybuild
-  password:
 
 test: &test
   adapter: postgresql
   encoding: unicode
   database: buildybuild_test
   pool: 5
-  username: buildybuild
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: buildybuild_production
   pool: 5
-  username: buildybuild
-  password:
 
 cucumber:
   <<: *test
