@@ -6,14 +6,18 @@
   = javascript_include_tag "application"
   = csrf_meta_tags
 %body
-  %section
-    %header
-      %h1 Buildy Build
-  %section
-    %nav links go here
-  %section
-    = yield
-  %section
-    %footer This will be the footer
+  %section#main_section
+    %table#main_table
+      %tr
+        %td#left
+          %nav.page
+            -5.times do |index|
+              = link_to "link#{index}"
+        %td#right
+          %header
+            %h1 Buildy Build
+          %section
+            = yield
+          %footer This will be the footer
 
 
