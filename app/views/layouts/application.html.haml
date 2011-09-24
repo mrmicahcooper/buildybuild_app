@@ -1,0 +1,19 @@
+!!!
+%html
+%head
+  %title Buildy Build
+  = stylesheet_link_tag "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+%body
+  %section
+    %header
+      %h1 Buildy Build
+  %section
+    %nav links go here
+  %section
+    = yield
+  %section
+    %footer This will be the footer
+
+
