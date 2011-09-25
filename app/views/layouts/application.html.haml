@@ -16,6 +16,10 @@
         %td#right
           %header
             %h1 Buildy Build
+            %h2.page_name Page
+            %nav.sub_page
+              - 5.times do |i|
+                =link_to "Sub link #{i}"
           %section
             = yield
           %footer This will be the footer

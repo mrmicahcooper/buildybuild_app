@@ -6,9 +6,16 @@
  *= require_tree .
 */
 
-*{vertical-align:top;}
+*{
+  vertical-align:top;
+  font-family:sans-serif;
+}
 
 h1,h2,h3,h4,h5{ margin: 0 0.2em; }
+
+h2.page_name{
+  padding:0.2em 1em;
+}
 
 h1{ font-size:2em; }
 h2{ font-size:1.7em; }
@@ -20,34 +27,59 @@ table{
   border-spacing:4px;
 }
 
+a{
+  font-size:1.1em;
+}
+nav.sub_page{
+  padding:1em 0;
+}
+
+nav.sub_page a{
+  display:inline-block;
+  padding: 0px 0.2em;
+}
+
+article{
+  text-align:justify;
+}
+
 form dd{ margin:0.4em;}
 
 label{
   display:block;
   min-width:100px;
+  font-size:0.9em;
 }
 
 select, input, textarea{
   margin-bottom:1em;
-}
-
-input[type="text"],input[type="password"], select{
-  width:200px;
-  height:22px;
-  border:dashed 2px #ffffff;
   background-color: #dedede;
 }
 
-input[type="text"]:focus,input[type="password"]:focus{
-  border:2px dotted #cccccc;
+input[type="text"],input[type="password"], select{
+  width:300px;
+  font-size:1.2em;
+  padding:5px;
+  height:22px;
+  border:dashed 2px #ffffff;
+}
+
+select{
+  height:33px;
+  width:315px;
 }
 
 input[type="submit"]{
-  background-color: #333;
-  padding:5px;
+  font-size:1.2em;
+  background-color: #333333;
+  padding:10px;
   border: dashed 2px white;
   color: white;
   font-size: 1em;
+}
+
+input[type="submit"]:hover {
+  background-color: #444;
 }
 
 textarea{
@@ -56,13 +88,11 @@ textarea{
   padding:0.7em;
   height:200px;
   border:dashed 2px #ffffff;
-  background-color: #dedede;
   resize:none
 }
 
 section#main_section{
   width:1000px;
-  border:solid 1px dotted;
   margin:0 auto;
   position:relative;
 }
