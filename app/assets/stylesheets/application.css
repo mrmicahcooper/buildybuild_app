@@ -9,13 +9,12 @@
 *{
   vertical-align:top;
   font-family:sans-serif;
+  font-size:15px;
 }
 
 h1,h2,h3,h4,h5{ margin: 0 0.2em; }
 
-h2.page_name{
-  padding:0.2em 1em;
-}
+h2.page_name{ padding:0.2em 1em; }
 
 h1{ font-size:2em; }
 h2{ font-size:1.7em; }
@@ -23,25 +22,18 @@ h3{ font-size:1.5em; }
 h4{ font-size:1.3em; }
 h5{ font-size:1.1em; }
 
-table{
-  border-spacing:4px;
-}
+table{ border-spacing:4px; }
 
-a{
-  font-size:1.1em;
-}
-nav.sub_page{
-  padding:1em 0;
-}
+a{ font-size:1.1em; }
+nav.sub_page{ padding:1em 0; }
 
 nav.sub_page a{
   display:inline-block;
   padding: 0px 0.2em;
 }
 
-article{
-  text-align:justify;
-}
+article{ text-align:justify; }
+
 
 form dd{ margin:0.4em;}
 
@@ -49,6 +41,7 @@ label{
   display:block;
   min-width:100px;
   font-size:0.9em;
+  padding-bottom:0.4em;
 }
 
 select, input, textarea{
@@ -84,11 +77,19 @@ input[type="submit"]:hover {
 
 textarea{
   display:block;
-  width:500px;
+  width:100%;
   padding:0.7em;
   height:200px;
   border:dashed 2px #ffffff;
-  resize:none
+}
+
+#body_text{
+  width:100%;
+}
+
+select:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  background-color:#e3f7f3;
+  border:solid 2px #bbbbbb;
 }
 
 section#main_section{
@@ -97,12 +98,14 @@ section#main_section{
   position:relative;
 }
 
+section#content{ width:100%; }
+
 #left{
-  border-right:solid #3333333 1px;
-  border-bottom:solid #3333333 1px;
   padding-left: 1em;
-  display:inline-block;
-  max-width:150px
+  display: inline-block;
+  max-width: 150px;
+  min-width: 100px;
+  text-align: right;
 }
 
 #left a{
@@ -115,3 +118,7 @@ section#main_section{
   padding:0 1em;
   border-left:solid #333333 1px;
 }
+
+.flight{ float:right; }
+
+.wide{ width:100% }

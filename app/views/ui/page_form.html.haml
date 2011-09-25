@@ -9,12 +9,21 @@
         = 5.times do |index|
           %option= "Page #{index}"
     %dd
+      %label Link order:
+      %select
+        -8.times do |i|
+          %option= i + 1
+    %dd
       %label Page type:
       %select
         %option static
         %option blog
     %dd
       %label Page body:
-      %textarea
+      %textarea#body_text
     %dd
-      %input(type="submit" value="Create page")
+      %label
+        %input(type="checkbox" value="Save")
+        Publish page
+    %dd
+      %input(type="submit" value="Save Page")

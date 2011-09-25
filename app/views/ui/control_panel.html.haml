@@ -1,0 +1,9 @@
+%ul.control_panel_page_list
+  - 3.times do |page|
+    %li page #{page}
+    %ul.control_panel_sub_page_list
+      - 4.times do |sub_page|
+        %li
+          sub page #{sub_page}
+          = link_to "edit"
+          = link_to "delete"

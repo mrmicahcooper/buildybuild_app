@@ -13,10 +13,12 @@
           %nav.page
             -5.times do |index|
               = link_to "link#{index}"
-        %td#right
+        %td#right.wide
           %header
+            .flight= link_to "Sign in"
             %h1 Buildy Build
-            %h2.page_name Page
+            %h2.page_name Page => Subpage
+
             %nav.sub_page
               - 5.times do |i|
                 =link_to "Sub link #{i}"
