@@ -4,6 +4,9 @@
       %label Page name:
       %input(type="text")
     %dd
+      %label Page title:
+      %input(type="text")
+    %dd
       %label Parent page:
       %select
         = 5.times do |index|
@@ -11,8 +14,8 @@
     %dd
       %label Link order:
       %select
-        -8.times do |i|
-          %option= i + 1
+        -8.downto(1) do |rank|
+          %option= rank
     %dd
       %label Page type:
       %select

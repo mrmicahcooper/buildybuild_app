@@ -24,7 +24,19 @@ h5{ font-size:1.1em; }
 
 table{ border-spacing:4px; }
 
-a{ font-size:1.1em; }
+a{
+  font-size:1.1em;
+  color:#06366d;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+a:visited{
+  color:#1271e5;
+}
+
 nav.sub_page{ padding:1em 0; }
 
 nav.sub_page a{
@@ -58,7 +70,7 @@ input[type="text"],input[type="password"], select{
 }
 
 select{
-  height:33px;
+  height:40px;
   width:315px;
 }
 
@@ -93,8 +105,10 @@ select:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:f
 }
 
 section#main_section{
-  width:1000px;
+  width:1200px;
+  min-height:800px;
   margin:0 auto;
+  padding:3em;
   position:relative;
 }
 
@@ -119,6 +133,25 @@ section#content{ width:100%; }
   border-left:solid #333333 1px;
 }
 
+.large{ font-size:1.2em; }
+
 .flight{ float:right; }
 
 .wide{ width:100% }
+
+.control_panel li{
+  padding:0.4em;
+}
+
+ul.controlpanel.page{
+  font-size:1.1em;
+  font-weight:bold;
+}
+
+ul.control_panel.sub_page{
+  border-bottom:solid 1px #333333;
+}
+
+ul.control_panel.sub_page:last-child{
+  border:none;
+}
