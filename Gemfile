@@ -30,9 +30,11 @@ group :test, :development do
   # Pretty printed test output
   gem 'cucumber'
   gem 'cucumber-rails'
+  gem 'dirty'
   gem 'database_cleaner'
-  gem 'turn', :require => false
+  gem 'fabrication'
+  gem 'itslog'
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug', platform: 'ruby_19'
-
+  gem 'turn', :require => false
 end
