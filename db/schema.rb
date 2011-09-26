@@ -11,6 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110927040942) do
+
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "body"
+    t.date     "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "unique"
+    t.boolean  "is_admin"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.string   "activation_state"
+    t.string   "activation_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "website_settings", :force => true do |t|
+    t.string   "setting_name"
+    t.string   "setting_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
