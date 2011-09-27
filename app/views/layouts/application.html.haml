@@ -11,16 +11,14 @@
       %tr
         %td#left
           %nav.page
-            -5.times do |index|
-              = link_to "link#{index}"
+            = "no pages" if page_link_names.empty?
+            -page_link_names.each do |page|
+              = link_to page.name, page.name
         %td#right.wide
           %header
             .flight= link_to "Sign in"
-            %h1 Website Name
-            %h2.page_name Page => Subpage
-
+            %h1= website_name ? website_name.setting_value : "Your website name here"
+            %h2= page.name unless page.nil?
             %nav.sub_page
-              - 5.times do |i|
-                =link_to "Sub link #{i}"
           %section
             = yield

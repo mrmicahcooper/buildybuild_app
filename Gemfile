@@ -13,9 +13,11 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'decent_exposure', '1.0.1'
 gem 'jquery-rails'
 gem 'pg'
 gem 'haml'
+gem 'sorcery', '0.6.1'
 gem 'therubyracer'
 
 # Use unicorn as the web server
@@ -34,6 +36,7 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'fabrication'
   gem 'itslog'
+  gem 'launchy'
   gem 'rspec-rails'
   gem 'ruby-debug19', require: 'ruby-debug', platform: 'ruby_19'
   gem 'turn', :require => false

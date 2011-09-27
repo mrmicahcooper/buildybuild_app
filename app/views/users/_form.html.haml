@@ -1,0 +1,16 @@
+= form_for :user do |f|
+  %dl#create_account.centered
+    %h2 Welcome to BuildyBuild!
+    %h3 You must be brand new...
+    %h4 So create your account!
+    %dd
+      = f.label :email
+      = f.text_field :email
+    %dd
+      = f.label :password, 'Create password'
+      = f.text_field :password
+    %dd
+      = f.label :confirm_password
+      = f.text_field :confirm_password
+    %dd
+      = f.submit 'create account'
