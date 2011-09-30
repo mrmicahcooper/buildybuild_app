@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if login(params[:email], params[:password])
       redirect_to control_panel_path
     else
-      render 'new', alert: 'Invalid login.'
+      redirect_to new_session_path, :alert => 'Invalid email and or password'
     end
   end
 end
