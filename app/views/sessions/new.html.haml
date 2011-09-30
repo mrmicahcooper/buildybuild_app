@@ -1,0 +1,13 @@
+- flash.keys.each do |type|
+  .flash{class: type}
+    %p= flash[type]
+= form_tag sessions_path do
+  %dl#sign_in.centered
+    %dd
+      = label_tag 'email', 'Email'
+      = text_field_tag 'email'
+    %dd
+      = label_tag 'password','Password'
+      = password_field_tag 'password'
+    %dd
+      = submit_tag "sign in"

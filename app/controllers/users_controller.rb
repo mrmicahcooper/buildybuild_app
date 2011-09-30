@@ -1,12 +1,11 @@
-class Users < ApplicationController
+class UsersController < ApplicationController
   expose(:users) { User.all }
   expose(:user)
 
 
   def create
     if user.save
-      flash[:notice] = "Account has been created. Please confirm your email to continue"
-      redirect_to sign_in_path
+      redirect_to new_session_path, :notice => "Account has been created. Now sign in!"
     else
       render 'new'
     end

@@ -1,0 +1,22 @@
+= form_for user do |f|
+  - if f.object.errors.any?
+    .flash.alert
+      %p= f.object.errors.full_messages.to_sentence
+  %dl#create_account.centered
+    %h2 Welcome to BuildyBuild!
+    %h3 You must be brand new...
+    %h4 So create your account!
+    %dd
+      = f.label :username
+      = f.text_field :username
+    %dd
+      = f.label :email
+      = f.text_field :email
+    %dd
+      = f.label :password, 'Create password'
+      = f.password_field :password
+    %dd
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+    %dd
+      = f.submit 'create account'
