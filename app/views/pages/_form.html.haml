@@ -1,4 +1,7 @@
 = form_for page do |f|
+  - if f.object.errors.any?
+    .flash.alert
+      %p= f.object.errors.full_messages.to_sentence
   %dl#create_website.centered
     %dd
       = f.label :name

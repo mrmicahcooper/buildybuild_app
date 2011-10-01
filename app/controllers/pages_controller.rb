@@ -11,6 +11,14 @@ class PagesController < ApplicationController
     end
   end
 
+  def create
+    if page.save(params[:page])
+      redirect_to control_panel_path, :notice => "Page has been created"
+    else
+      render 'new'
+    end
+  end
+
   def update
     if page.update_attributes(params[:page])
       redirect_to control_panel_path, :notice => "Page has been updated"
