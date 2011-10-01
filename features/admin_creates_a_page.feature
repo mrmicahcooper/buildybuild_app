@@ -36,3 +36,6 @@ Feature: Admin creates a page
     Then I should see "Name has already been taken"
     And I should see "Title can't be blank"
 
+    When I fill in "Name" with ""
+    And I press "Save page"
+    Then I should see "Name can't be blank"
