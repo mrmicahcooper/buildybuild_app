@@ -19,7 +19,7 @@
               - if current_user
                 = link_to "sign out"
                 ||
-                = link_to "control panel"
+                = link_to "control panel", control_panel_path
               - else
                 = link_to "sign in", new_session_path
             %h1= website_name
