@@ -12,7 +12,7 @@
         %td#left
           %nav.page
             -page_link_names.each do |page|
-              = link_to page.name, page.name
+              = link_to page.name.titleize, "/p/#{page.name}"
         %td#right.wide
           %header
             .flight= link_to "sign in", new_session_path

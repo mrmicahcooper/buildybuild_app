@@ -105,7 +105,7 @@ select:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:f
 }
 
 section#main_section{
-  width:1200px;
+  width:1150px;
   min-height:800px;
   margin:0 auto;
   padding:3em;
@@ -115,10 +115,9 @@ section#main_section{
 section#content{ width:100%; }
 
 #left{
-  padding-left: 1em;
   display: inline-block;
-  max-width: 150px;
-  min-width: 100px;
+  max-width: 300px;
+  min-width: 200px;
   text-align: right;
 }
 
