@@ -1,22 +1,11 @@
+-flash.keys.each do |type|
+  .flash{class: type}
+    %p= flash[type]
 %ul.control_panel.page
   %h3 Control Panel
-  - 3.times do |page|
-    %li 
+  - all_pages.each do |page|
+    %li(class= "#{page.name}")
       %strong.large
-        = link_to "page #{page}"
+        = link_to page.name.titleize, "/p/#{page.name}"
       = '-->'
-      = link_to "edit"
-      |
-      = link_to "delete"
-      |
-      = link_to "add post"
-    %ul.control_panel.sub_page
-      - 4.times do |sub_page|
-        %li
-          =link_to "sub page #{sub_page}"
-          = '-->'
-          = link_to "edit"
-          |
-          = link_to "delete"
-          |
-          = link_to "add post"
+      = link_to "edit", edit_page_path(page)

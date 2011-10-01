@@ -1,4 +1,3 @@
-- if page
-  %h2= page.name.titleize
-  = page.body
-=@this
+- if linked_page
+  %h2= linked_page.name.titleize
+  = linked_page.body
