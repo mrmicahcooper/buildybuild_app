@@ -15,7 +15,13 @@
               = link_to page.name.titleize, "/p/#{page.name}"
         %td#right.wide
           %header
-            .flight= link_to "sign in", new_session_path
+            .flight
+              - if current_user
+                = link_to "sign out"
+                ||
+                = link_to "control panel"
+              - else
+                = link_to "sign in", new_session_path
             %h1= website_name
             %nav.sub_page
           %section
