@@ -12,6 +12,11 @@
   font-size:15px;
 }
 
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
 h1,h2,h3,h4,h5{ margin: 0.2em 0; }
 
 h2.page_name{ padding:0.2em 1em; }
@@ -106,7 +111,7 @@ section#main_section{
   width:1150px;
   min-height:800px;
   margin:0 auto;
-  padding:3em;
+  padding:1.5em;
   position:relative;
 }
 
@@ -151,4 +156,10 @@ ul.control_panel.sub_page{
 
 ul.control_panel.sub_page:last-child{
   border:none;
+}
+
+section.flash{
+  text-align:center;
+  padding:3px;
+  background-color: #f6ff84;
 }

@@ -9,4 +9,9 @@ class SessionsController < ApplicationController
       redirect_to new_session_path, :alert => 'Invalid email and or password'
     end
   end
+
+  def destroy
+    logout
+    redirect_to :root, :notice => "You have signed out"
+  end
 end

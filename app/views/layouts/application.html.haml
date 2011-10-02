@@ -6,6 +6,9 @@
   = javascript_include_tag "application"
   = csrf_meta_tags
 %body
+  -flash.keys.each do |type|
+    %section.flash{class: type}
+      %p= flash[type]
   %section#main_section
     %table#main_table
       %tr
@@ -17,7 +20,7 @@
           %header
             .flight
               - if current_user
-                %div= link_to "sign out"
+                %div= link_to "sign out", sign_out_path
                 %div= link_to "control panel", control_panel_path
               - else
                 = link_to "sign in", new_session_path
