@@ -27,15 +27,13 @@ table{ border-spacing:4px; }
 a{
   font-size:1.1em;
   color:#06366d;
-}
-
-a:hover{
   text-decoration:none;
 }
 
-a:visited{
-  color:#1271e5;
+a:hover{
+  text-decoration:underline;
 }
+
 
 nav.sub_page{ padding:1em 0; }
 
@@ -129,7 +127,7 @@ section#content{ width:100%; }
 
 #right{
   padding:0 1em;
-  border-left:solid #333333 1px;
+  border-left:solid #333333 3px;
 }
 
 .large{ font-size:1.2em; }
