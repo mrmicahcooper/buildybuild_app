@@ -11,15 +11,14 @@
       %tr
         %td#left
           %nav.page
-            -page_link_names.each do |page|
+            - page_link_names.each do |page|
               = link_to page.name.titleize, "/p/#{page.name}"
         %td#right.wide
           %header
             .flight
               - if current_user
-                = link_to "sign out"
-                ||
-                = link_to "control panel", control_panel_path
+                %div= link_to "sign out"
+                %div= link_to "control panel", control_panel_path
               - else
                 = link_to "sign in", new_session_path
             %h1= website_name ? website_name.value : 'Webiste Name Here'

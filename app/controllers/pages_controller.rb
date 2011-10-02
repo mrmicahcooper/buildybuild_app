@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  expose(:linked_page) { Page.find_by_name(params[:page]) }
+  expose(:linked_page) { Page.find_by_name(params[:page]) || Page.first }
   expose(:all_pages) { Page.all }
   expose(:page)
   expose(:users) { User.all }
