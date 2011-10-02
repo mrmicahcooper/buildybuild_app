@@ -1,9 +1,11 @@
 -flash.keys.each do |type|
   .flash{class: type}
     %p= flash[type]
+%ul.flight
+  %li= link_to "Settings", edit_settings_path
+  %li= link_to "Add new page", new_page_path
 %ul.control_panel.page
-  %h3 Control Panel
-  = link_to "Add new page", new_page_path
+  %h2 Control Panel
   - all_pages.each do |page|
     %li(class= "#{page.name}")
       %strong.large

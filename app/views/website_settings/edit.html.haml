@@ -1,0 +1,9 @@
+%h2 Website Settings
+%form(action="update" method="post")
+  %dl.centered
+    %dd
+      = hidden_field_tag 'website_settings[name]', 'website_name'
+      %label(for="website_name") Website name
+      = text_field_tag 'website_settings[value]' , website_name, :placeholder => 'Website name', :id => 'website_name'
+    %dd
+      = submit_tag 'Save'

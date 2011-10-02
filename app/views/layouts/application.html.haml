@@ -22,7 +22,7 @@
                 = link_to "control panel", control_panel_path
               - else
                 = link_to "sign in", new_session_path
-            %h1= website_name
+            %h1= website_name ? website_name.value : 'Webiste Name Here'
             %nav.sub_page
           %section
             = yield
