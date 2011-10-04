@@ -21,8 +21,6 @@ group :test, :development do
   gem 'dirty'
   gem 'database_cleaner'
   gem 'fabrication'
-  gem 'fuubar'
-  gem 'fuubar-cucumber'
   gem 'itslog'
   gem 'launchy'
   gem 'rspec-rails'

@@ -9,3 +9,5 @@
         = link_to page.name.titleize, "/p/#{page.name}"
       = '-->'
       = link_to "edit", edit_page_path(page)
+      |
+      = link_to "delete", page_path(page), confirm: "Really delete?", method: :delete

@@ -29,4 +29,10 @@ class PagesController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    page.destroy
+    redirect_to control_panel_path, notice: "#{page.name.titleize} has been deleted"
+  end
+
 end
