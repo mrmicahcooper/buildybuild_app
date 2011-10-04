@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  before_filter :require_login, :except => :show
+
   expose(:linked_page) { Page.find_by_name(params[:page]) || Page.first }
   expose(:all_pages) { Page.all }
   expose(:page)

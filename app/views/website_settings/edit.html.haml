@@ -1,5 +1,5 @@
 %h2 Website Settings
-%form(action="update" method="post")
+=form_for website_settings, html: {method: "put"} do
   %dl.centered
     %dd
       = hidden_field_tag 'website_settings[name]', 'website_name'
