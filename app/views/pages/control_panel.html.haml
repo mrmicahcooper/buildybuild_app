@@ -3,7 +3,7 @@
   %li= link_to "Add new page", new_page_path
 %ul.control_panel.page
   %h2 Control Panel
-  - all_pages.each do |page|
+  - main_pages.each do |page|
     %li(class= "#{page.name}")
       %strong.large
         = link_to page.name.titleize, "/p/#{page.name}"

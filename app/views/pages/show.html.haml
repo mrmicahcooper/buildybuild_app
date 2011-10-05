@@ -1,3 +1,5 @@
-- if linked_page
-  %h2= linked_page.name.titleize
-  = linked_page.body
+%nav.sub_page
+  - sub_pages.each do |sub_page|
+    = link_to sub_page.name.titleize, "#{linked_page.name}/#{sub_page.name}"
+%h2= linked_page.name.titleize
+= linked_page.body

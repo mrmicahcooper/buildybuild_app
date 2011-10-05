@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111001204408) do
+ActiveRecord::Schema.define(:version => 20111004170358) do
 
   create_table "pages", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20111001204408) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "body"
+    t.integer  "parent_page_id"
   end
 
   create_table "users", :force => true do |t|

@@ -10,6 +10,9 @@
       = f.label :title
       = f.text_field :title
     %dd
+      = f.label :parent_page_id
+      = f.select :parent_page_id, main_pages.collect {|f| [f.name.titleize,f.id]}, include_blank: 'none' 
+    %dd
       = f.label :body
       = f.text_area :body
     %dd

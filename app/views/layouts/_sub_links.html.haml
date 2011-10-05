@@ -1,0 +1,3 @@
+%nav.sub_page
+  - sub_pages.each do |sub_page|
+    = link_to sub_page.name.titleize, "/p/#{linked_page.name}/#{sub_page.name}"

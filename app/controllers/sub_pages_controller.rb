@@ -1,0 +1,2 @@
+class SubPagesController < PagesController
+end
