@@ -5,9 +5,6 @@ Fabricator(:page) do
   published_at { 1.week.ago }
 end
 
-
-Fabricator(:unpublished_page, :from => :page) do
+Fabricator(:unpublished_page, from: :page) do
   published_at { nil }
 end
-
-
