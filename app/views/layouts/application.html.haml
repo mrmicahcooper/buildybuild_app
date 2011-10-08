@@ -1,7 +1,7 @@
 !!!
 %html
 %head
-  %title= website_title
+  %title= website_title or website_name
   = stylesheet_link_tag "application"
   = javascript_include_tag "application"
   = csrf_meta_tags
@@ -24,6 +24,6 @@
                 %div= link_to "control panel", control_panel_path
               - else
                 = link_to "sign in", new_session_path
-            %h1= website_name ? website_name.value : 'Webiste Name Here'
+            %h1= website_name
           %section
             = yield

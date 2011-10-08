@@ -9,7 +9,8 @@ Feature: User views page title
   Scenario:
 
     Given the following parent page:
-      | title | webpage |
+      | title | webpage      |
+      | name  | website page |
     And I am signed in
     And I am on the home page
     Then I should see "webpage" within "title"

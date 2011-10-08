@@ -7,8 +7,10 @@ class PagesController < ApplicationController
   expose(:published_main_pages) { ParentPage.published }
   expose(:sub_pages) { current_page.sub_pages.published }
   expose(:published_sub_pages) { current_page.sub_pages.published }
-  expose(:current_page) { ParentPage.find_by_name(params[:page]) || ParentPage.first }
-  expose(:website_title) { current_page.title }
+  expose(:current_page) do
+     (ParentPage.find_by_name(params[:page_name]) if params[:page_name]) or ParentPage.first
+  end
+  expose(:website_title) { current_page.title if current_page }
   expose(:users) { User.all }
   expose(:user)
 

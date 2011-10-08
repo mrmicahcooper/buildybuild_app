@@ -4,6 +4,6 @@
     %dd
       = hidden_field_tag 'website_settings[name]', 'website_name'
       %label(for="website_name") Website name
-      = text_field_tag 'website_settings[value]' , website_name ? website_name.value : '', :placeholder => 'Website name', :id => 'website_name'
+      = text_field_tag 'website_settings[value]' , website_name.try(:value) || website_name, :placeholder => 'Website name', :id => 'website_name'
     %dd
       = submit_tag 'Save'
