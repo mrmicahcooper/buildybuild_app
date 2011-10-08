@@ -1,3 +1,4 @@
 = render 'layouts/sub_links'
 %h2= "#{current_page.name.titleize} : #{current_sub_page.name.titleize}"
-= format(current_sub_page.body)
+%article
+  = format(current_sub_page.body)

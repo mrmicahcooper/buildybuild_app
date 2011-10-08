@@ -18,7 +18,12 @@
       = f.text_field :published_at, value: page.publish_date
   %dl
     %dd
-      = f.label :body
+      %label(for = "page_body")
+        Body
+        %span.grey.small
+          (click
+          = link_to 'here', 'http://hw.libsyn.com/p/8/3/3/8339a864bb8faa83/Markdown_Cheat_Sheet.pdf', target: '_blank'
+          learn to style your text)
       = f.text_area :body, placeholder: 'Page content... '
     %dd
       = f.submit 'Save page'

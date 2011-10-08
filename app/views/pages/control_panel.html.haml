@@ -1,13 +1,13 @@
-%ul.flight
-  %li= link_to "Settings", edit_website_settings_path
-  %li= link_to "Add new page", new_page_path
-%ul.control_panel.page
-  %h2 Control Panel
+%h2.inline-block Control Panel ||
+= link_to "Settings", edit_website_settings_path
+|
+= link_to "Add new page", new_page_path
+%article.control_panel
   - main_pages.each do |page|
     %li(class= "#{page.name}")
       %strong.large
         = link_to page.name.titleize, "/p/#{page.name}"
-      = '-->'
+      ||
       = link_to "edit", edit_page_path(page)
       |
       = link_to "delete", page_path(page), confirm: "Really delete?", method: :delete
@@ -17,7 +17,7 @@
         %li(class= "#{sub_page.name}")
           %strong
             = link_to sub_page.name.titleize, "/p/#{sub_page.name}"
-          = '-->'
+          ||
           = link_to "edit", edit_page_path(sub_page)
           |
           = link_to "delete", page_path(sub_page), confirm: "Really delete?", method: :delete
