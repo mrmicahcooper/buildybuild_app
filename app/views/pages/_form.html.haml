@@ -2,18 +2,23 @@
   - if f.object.errors.any?
     .flash.alert
       %p= f.object.errors.full_messages.to_sentence
-  %dl#create_website.centered
-    %dd
+  %dl
+    %dd.inline-block
       = f.label :name
-      = f.text_field :name
-    %dd
+      = f.text_field :name, placeholder: 'Page name'
+    %dd.inline-block
       = f.label :title
-      = f.text_field :title
-    %dd
+      = f.text_field :title, placeholder: 'Page title'
+  %dl
+    %dd.inline-block
       = f.label :page_id, 'Parent page'
       = f.select :page_id, main_pages.collect {|f| [f.name.titleize,f.id]}, include_blank: 'none'
+    %dd.inline-block
+      = f.label :published_at, 'Publish date'
+      = f.text_field :published_at, value: page.publish_date
+  %dl
     %dd
       = f.label :body
-      = f.text_area :body
+      = f.text_area :body, placeholder: 'Page content... '
     %dd
       = f.submit 'Save page'

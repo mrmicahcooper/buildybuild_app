@@ -1,7 +1,7 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
+  /*
+   * This is a manifest file that'll automatically include all the stylesheets available in this directory
+   * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+   * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree .
 */
@@ -35,10 +35,9 @@ a{
   text-decoration:none;
 }
 
-a:hover{
-  text-decoration:underline;
-}
+a:hover{ text-decoration:underline; }
 
+dd{ min-height:79px; }
 
 nav.sub_page{ padding:1em 0; }
 
@@ -141,8 +140,15 @@ section#content{ width:100%; }
 
 .wide{ width:100% }
 
-.control_panel li{
-  padding:0.4em;
+.control_panel li{ padding:0.4em; }
+
+.inline-block{ display:inline-block; }
+
+.grey{ color:#cccccc }
+
+.alert{
+  background-color:#84d2ff;
+  padding:0.5em;
 }
 
 ul.controlpanel.page{
@@ -161,5 +167,5 @@ ul.control_panel.sub_page:last-child{
 section.flash{
   text-align:center;
   padding:3px;
-  background-color: #f6ff84;
+  background-color: #84d2ff;
 }

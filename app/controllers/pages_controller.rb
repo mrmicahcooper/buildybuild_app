@@ -3,9 +3,11 @@ class PagesController < ApplicationController
   before_filter :require_login, :except => :show
 
   expose(:page)
-  expose(:linked_page) { ParentPage.find_by_name(params[:page]) || ParentPage.first }
   expose(:main_pages) { ParentPage.all }
-  expose(:sub_pages) { linked_page.sub_pages }
+  expose(:published_main_pages) { ParentPage.published }
+  expose(:sub_pages) { linked_page.sub_pages.published }
+  expose(:published_sub_pages) { linked_page.sub_pages.published }
+  expose(:linked_page) { ParentPage.find_by_name(params[:page]) || ParentPage.first }
   expose(:users) { User.all }
   expose(:user)
 
