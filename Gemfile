@@ -12,6 +12,7 @@ gem 'decent_exposure', '1.0.1'
 gem 'jquery-rails'
 gem 'pg'
 gem 'haml'
+gem 'rdiscount', '1.6.8'
 gem 'sorcery', '0.6.1'
 gem 'therubyracer'
 
