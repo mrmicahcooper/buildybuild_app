@@ -1,3 +1,3 @@
 = render 'layouts/sub_links'
-%h2= "#{linked_page.name.titleize} : #{linked_sub_page.name.titleize}"
-= linked_sub_page.body
+%h2= "#{current_page.name.titleize} : #{current_sub_page.name.titleize}"
+= current_sub_page.body
