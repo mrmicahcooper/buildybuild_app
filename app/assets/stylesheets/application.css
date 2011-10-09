@@ -58,7 +58,7 @@ nav.sub_page{ padding:0.3em 0; }
 
 nav.sub_page a{
   display:inline-block;
-  padding: 0px 0.2em;
+  padding: 5px;
 }
 
 article{
@@ -168,10 +168,19 @@ section#content{ width:100%; }
 
 .grey{ color:#cccccc }
 
+.centered{ text-align: center;}
+
 .alert{
   background-color:#84d2ff;
   padding:0.5em;
 }
+
+.current_page{
+  background-color: #000;
+  color:#fff;
+}
+
+ul{ margin:0px;}
 
 ul.controlpanel.page{
   font-size:1.1em;
@@ -179,7 +188,7 @@ ul.controlpanel.page{
 }
 
 ul.control_panel.sub_page{
-  border-bottom:solid 1px #333333;
+  border-bottom:solid 2px #dddddd;
 }
 
 ul.control_panel.sub_page:last-child{

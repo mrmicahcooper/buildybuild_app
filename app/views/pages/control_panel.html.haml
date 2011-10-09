@@ -3,22 +3,23 @@
 |
 = link_to "Add new page", new_page_path
 %article.control_panel
-  - main_pages.each do |page|
-    %li(class= "#{page.name}")
-      %strong.large
-        = link_to page.name.titleize, "/p/#{page.name}"
-      ||
-      = link_to "edit", edit_page_path(page)
-      |
-      = link_to "delete", page_path(page), confirm: "Really delete?", method: :delete
-      %span.grey=  page.publish_date || "(draft)"
-    %ul
-      - page.sub_pages.each do |sub_page|
-        %li(class= "#{sub_page.name}")
-          %strong
-            = link_to sub_page.name.titleize, "/p/#{sub_page.name}"
-          ||
-          = link_to "edit", edit_page_path(sub_page)
-          |
-          = link_to "delete", page_path(sub_page), confirm: "Really delete?", method: :delete
-          %span.grey=  sub_page.publish_date || "(draft)"
+  %ul
+    - main_pages.each do |page|
+      %li(class= "#{page.name}")
+        %strong.large
+          = link_to page.name.titleize, "/p/#{page.name}"
+        ||
+        = link_to "edit", edit_page_path(page)
+        |
+        = link_to "delete", page_path(page), confirm: "Really delete?", method: :delete
+        %span.grey=  page.publish_date || "(draft)"
+      %ul.control_panel.sub_page
+        - page.sub_pages.each do |sub_page|
+          %li(class= "#{sub_page.name}")
+            %strong
+              = link_to sub_page.name.titleize, "/p/#{sub_page.name}"
+            ||
+            = link_to "edit", edit_page_path(sub_page)
+            |
+            = link_to "delete", page_path(sub_page), confirm: "Really delete?", method: :delete
+            %span.grey=  sub_page.publish_date || "(draft)"
