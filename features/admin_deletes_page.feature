@@ -8,7 +8,7 @@ Feature: Admin deletes page
   - Following that link prompts for deletion confirmation
   - Comfirming deletion deletes the page
 
-  Scenario:
+  Scenario: deletes a parent page
     Given the following page:
       | name | Page 1 |
     And I am signed in
@@ -16,3 +16,9 @@ Feature: Admin deletes page
     Then I should see "Page 1 has been deleted"
     And I should not see "Page 1" within ".control_panel"
 
+
+  Scenario: Admin cannot delete a parent page that has children
+    Given the page named "cool" has a sub page named "awesome"
+    And I am signed in
+    And I follow "delete" within ".cool"
+    Then I should see "You cannot delete a parent page before deleting all its children"

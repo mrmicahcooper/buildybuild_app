@@ -1,6 +1,6 @@
 %h2 Website Settings
 =form_for website_settings, html: {method: "put"} do
-  %dl.centered
+  %dl
     %dd
       = hidden_field_tag 'website_settings[name]', 'website_name'
       %label(for="website_name") Website name

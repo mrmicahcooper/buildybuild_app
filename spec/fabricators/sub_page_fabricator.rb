@@ -2,5 +2,5 @@ Fabricator(:sub_page) do
   title "Sub Page"
   name "Awesome Page"
   body "this is the body of the page"
-  parent_page!
+  parent_page { Fabricate :parent_page }
 end

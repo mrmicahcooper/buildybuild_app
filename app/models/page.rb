@@ -2,10 +2,15 @@ class Page < ActiveRecord::Base
 
   validates_presence_of :title, :name, :body
   validates_uniqueness_of :name
+  has_many :sub_pages
 
   before_validation :prepare_attributes_for_save
 
   scope :published, where('published_at <= now()')
+
+  def has_no_children
+    self.sub_pages.empty?
+  end
 
   def prepare_attributes_for_save
    self.title = title.parameterize

@@ -36,8 +36,12 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    page.destroy
-    redirect_to control_panel_path, notice: "#{page.name.titleize} has been deleted"
+    if page.has_no_children and page.destroy
+      flash[:notice] = "#{page.name.titleize} has been deleted"
+    else
+      flash[:notice] = "You cannot delete a parent page before deleting all its children"
+    end
+      redirect_to control_panel_path,
   end
 
 end

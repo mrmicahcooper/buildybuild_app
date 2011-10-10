@@ -44,6 +44,8 @@ h5{ font-size:1.1em; }
 
 table{ border-spacing:4px; }
 
+td{ vertical-align:top; }
+
 a{
   font-size:1.1em;
   color:#06366d;
