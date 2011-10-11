@@ -8,26 +8,34 @@ Instructions assume you already have [Git](http://git-scm.com/) installed...
 
 ###Install
 
-- Clone the repository by pasting this into your terminal:
 
-`git clone git://github.com/mrmicahcooper/buildybuild.git`
+`#Clone the repository by pasting this into your terminal and go to it
+git clone git://github.com/mrmicahcooper/buildybuild.git`
 
-- Install bundler if you don't already have it with:
+git clone git://github.com/mrmicahcooper/buildybuild.git
 
-`gem install bundler`
+cd buildybuild`
 
-- Run bundler:
+`#Install bundler if you don't already have it and run bundle:
 
-`bundle`
+gem install bundler
+
+bundle`
+
+`#run the following commands for setup:
+
+rake db:setup
+
+rake db:migrate`
 
 ###Deploy
-These steps are for deploying on Heroku. You'll need to [create an account on Heroku](https://api.heroku.com/signup) if you haven't already. [Follow the heroku documentation](http://devcenter.heroku.com/articles/quickstart) or paste the following into your terminal:
+These steps are for deploying on Heroku. You'll need to [create an account on Heroku](https://api.heroku.com/signup) if you haven't already. [Follow the heroku documentation](http://devcenter.heroku.com/articles/quickstart) or paste the following into your terminal.
 
-`heroku create`
 
-`git push heroku`
-
-`heroku rake db:migrate`
+` gem install heroku
+heroku create
+git push heroku master
+heroku rake db:migrate`
 
 ###Give to people
 - Go to Heroku and get the url for they app and give it to whoever has been bugging you for a site.
