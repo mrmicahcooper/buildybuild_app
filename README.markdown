@@ -10,23 +10,23 @@ Assuming you already had RVM and Git already installed...
 
 - Clone the repository by pasting this into your terminal:
 
-`git://github.com/mrmicahcooper/buildybuild.git
+`git://github.com/mrmicahcooper/buildybuild.git`
 
 - Install bundler if you don't already have it with:
 
-`gem install bundler
+`gem install bundler`
 
 - Run bundler:
 
-`bundle
+`bundle`
 
 ####(Deploy)
 These steps are for deploying on Heroku. You'll need to [create an account on Heroku](https://api.heroku.com/signup) if you haven't already. [Here is their documentation](http://heroku.com). And here are the commands:
 
-`heroku create
+`heroku create`
 
-`git push heroku
+`git push heroku`
 
-`heroku rake db:migrate
+`heroku rake db:migrate`
 
 
