@@ -3,10 +3,10 @@ Buildy build is a simple website builder you can use for all the peolple that as
 
 Buildybuild's goal is to be simple to install an give to people.
 
-##Install and deploy
-Assuming you already had RVM and Git already installed...
+##Instructions
+Instructions assume you already have [Git](http://git-scm.com/) installed...
 
-####Steps (Install)
+###Install
 
 - Clone the repository by pasting this into your terminal:
 
@@ -20,8 +20,8 @@ Assuming you already had RVM and Git already installed...
 
 `bundle`
 
-####(Deploy)
-These steps are for deploying on Heroku. You'll need to [create an account on Heroku](https://api.heroku.com/signup) if you haven't already. [Here is their documentation](http://heroku.com). And here are the commands:
+###Deploy
+These steps are for deploying on Heroku. You'll need to [create an account on Heroku](https://api.heroku.com/signup) if you haven't already. [Follow the heroku documentation](http://devcenter.heroku.com/articles/quickstart) or paste the following into your terminal:
 
 `heroku create`
 
@@ -29,4 +29,6 @@ These steps are for deploying on Heroku. You'll need to [create an account on He
 
 `heroku rake db:migrate`
 
-
+###Give to people
+-Go to Heroku and get the url for they app and give it to whoever has been bugging you for a site.
+-Then send them to [buildybuild.com](http://buildybuild.com) for instructions on how to use the site.
