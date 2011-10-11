@@ -10,7 +10,7 @@ Instructions assume you already have [Git](http://git-scm.com/) installed...
 
 - Clone the repository by pasting this into your terminal:
 
-`git://github.com/mrmicahcooper/buildybuild.git`
+`git clone git://github.com/mrmicahcooper/buildybuild.git`
 
 - Install bundler if you don't already have it with:
 
