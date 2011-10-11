@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :require_login, :except => :new
+
   expose(:users) { User.all }
   expose(:user)
 
