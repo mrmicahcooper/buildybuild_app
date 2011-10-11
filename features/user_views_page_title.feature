@@ -13,4 +13,4 @@ Feature: User views page title
       | name  | website page |
     And I am signed in
     And I am on the home page
-    Then I should see "webpage" within "title"
+    Then I should see "Webpage" within "title"

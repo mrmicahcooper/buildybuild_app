@@ -11,7 +11,7 @@ class PagesController < ApplicationController
      (ParentPage.find_by_name(params[:page_name]) if params[:page_name]) or ParentPage.first
   end
   expose(:current_sub_page){ SubPage.find_by_name(params[:sub_page_name]) }
-  expose(:website_title) { current_page.title if current_page }
+  expose(:website_title) { current_page.title.titleize if current_page }
   expose(:users) { User.all }
   expose(:user)
 

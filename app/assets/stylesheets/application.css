@@ -11,6 +11,13 @@
   font-size:15px;
 }
 
+#website_header{
+  position:relative;
+  left:2em;
+}
+
+
+
 body{
   padding: 0px;
   margin: 0px;
@@ -22,7 +29,7 @@ header h1,header h2,header h3,header h4,header h5{
   font-weight: normal;
 }
 
-header h1{ font-size:2.6em; }
+header h1{ font-size:3.7em; }
 header h2{ font-size:1.7em; }
 header h3{ font-size:1.5em; }
 header h4{ font-size:1.3em; }
@@ -156,6 +163,10 @@ section#content{ width:100%; }
 #right{
   padding:0 1em;
   border-left:solid #333333 3px;
+}
+
+.sign_in{
+  z-index:100;
 }
 
 .large{ font-size:1.2em; }
