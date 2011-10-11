@@ -30,5 +30,5 @@ These steps are for deploying on Heroku. You'll need to [create an account on He
 `heroku rake db:migrate`
 
 ###Give to people
--Go to Heroku and get the url for they app and give it to whoever has been bugging you for a site.
--Then send them to [buildybuild.com](http://buildybuild.com) for instructions on how to use the site.
+- Go to Heroku and get the url for they app and give it to whoever has been bugging you for a site.
+- Send them to [buildybuild.com](http://buildybuild.com) for instructions on how to use the site.
