@@ -16,8 +16,6 @@
   left:2em;
 }
 
-
-
 body{
   padding: 0px;
   margin: 0px;
@@ -58,6 +56,12 @@ a{
   color:#06366d;
   text-decoration:none;
 }
+
+article a{ text-decoration:underline; }
+
+article a:hover{ text-decoration:none; }
+
+li{ padding:3px }
 
 a:hover{ text-decoration:underline; }
 
