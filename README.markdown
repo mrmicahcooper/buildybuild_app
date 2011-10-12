@@ -1,10 +1,10 @@
 #Buildy Build
-Buildy build is a simple website builder you can use for all the peolple that ask you to make them a website when you tell them you're a web developer.
+Buildy build is a simple website builder you can use for all the people that ask you to make them a website when you tell them you're a web developer.
 
-Buildybuild's goal is to be simple to install an give to people.
+Buildybuild's goal is to be simple to install and easy understand for the people you give it to.
 
 ##Instructions
-Instructions assume you already have [Git](http://git-scm.com/) installed...
+Instructions assume you already have [Git](http://git-scm.com/) installed and are somewhat familiar with Ruby on Rails...
 
 ###Install
 
