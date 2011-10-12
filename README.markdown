@@ -23,9 +23,9 @@ Install bundler if you don't already have it and run bundle:
 
 run the following commands for setup:
 
-rake db:setup
+`rake db:setup`
 
-rake db:migrate`
+`rake db:migrate`
 
 ###Deploy
 These steps are for deploying on Heroku. You'll need to [create an account on Heroku](https://api.heroku.com/signup) if you haven't already. [Follow the heroku documentation](http://devcenter.heroku.com/articles/quickstart) or paste the following into your terminal.
@@ -34,7 +34,9 @@ These steps are for deploying on Heroku. You'll need to [create an account on He
 `gem install heroku`
 
 `heroku create`
+
 `git push heroku master`
+
 `heroku rake db:migrate`
 
 ###Give to people
