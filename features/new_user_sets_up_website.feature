@@ -16,7 +16,6 @@ Feature: New user sets up Account
 
   Scenario: first time admin views site
     When I fill in the following:
-      | Username              | Micah                   |
       | Email                 | mrmicahcooper@gmail.com |
       | Create password       | password                |
       | Password confirmation | password               |
@@ -26,18 +25,15 @@ Feature: New user sets up Account
 
   Scenario: bad and blank email
     When I fill in the following:
-      | Username              | Micah             |
       | Email                 | mrmicahcooper@gom |
       | Create password       | password          |
       | Password confirmation | passsword         |
-    And I press "create account"
     And I press "create account"
     Then I should see "Email is invalid"
 
 
   Scenario: passwords don't match
     When I fill in the following:
-      | Username             | Micah                   |
       | Email                | mrmicahcooper@gmail.com |
       | Create password      | password                |
       | Password confirmation | passwordy               |
