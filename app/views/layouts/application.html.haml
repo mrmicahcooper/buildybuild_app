@@ -4,6 +4,7 @@
   %title= website_title or website_name
   = stylesheet_link_tag "application"
   = javascript_include_tag "application"
+  = favicon_link_tag 'favicon.ico'
   = csrf_meta_tags
   - if current_sub_page
     :css
