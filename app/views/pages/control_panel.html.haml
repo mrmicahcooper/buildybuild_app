@@ -17,7 +17,7 @@
         - page.sub_pages.each do |sub_page|
           %li(class= "#{sub_page.name}")
             %strong
-              = link_to sub_page.name.titleize, "/p/#{sub_page.name}"
+              = link_to sub_page.name.titleize, "/p/#{page.name}/#{sub_page.name}"
             ||
             = link_to "edit", edit_page_path(sub_page)
             |
