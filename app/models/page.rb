@@ -1,8 +1,9 @@
 class Page < ActiveRecord::Base
 
-  validates_presence_of :title, :name, :body
+  validates_presence_of :title, :name
   validates_uniqueness_of :name
   has_many :sub_pages
+  has_many :posts
 
   before_validation :prepare_attributes_for_save
 
@@ -13,7 +14,6 @@ class Page < ActiveRecord::Base
   end
 
   def prepare_attributes_for_save
-   self.title = title.parameterize
    self.name = name.parameterize
   end
 
