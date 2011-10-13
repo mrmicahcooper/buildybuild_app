@@ -1,0 +1,27 @@
+%h2
+  Add new post for
+  = page.name.titleize
+= form_for post do |f|
+  - if f.object.errors.any?
+    .flash.alert
+      %p= f.object.errors.full_messages.to_sentence
+  = f.hidden_field :page_id
+  %dl
+    %dd.inline-block
+      = f.label :title, 'Post title'
+      = f.text_field :title, placeholder: 'Post title'
+    %dd.inline-block
+      = f.label :published_at, 'Publish date'
+      = f.text_field :published_at, value: page.publish_date
+  %dl
+    %dd
+      %label(for = "post_body")
+        Body
+        %span.grey.small
+          (click
+          = link_to 'here', 'http://hw.libsyn.com/p/8/3/3/8339a864bb8faa83/Markdown_Cheat_Sheet.pdf', target: '_blank'
+          learn to style your text)
+      = f.text_area :body, placeholder: 'Post'
+
+    %dd
+      = f.submit 'Save post'
