@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :require_login
+
   expose(:page) { Page.find(params[:page_id] || params[:post][:page_id]) }
   expose(:posts) { page.posts }
   expose(:post)

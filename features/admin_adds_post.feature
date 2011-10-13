@@ -10,7 +10,7 @@ Feature: Admin adds post
   -- Post
   --Submitting that form adds a post to the page
 
-  Scenario: 
+  Scenario:
     Given the following page:
       | name | pager |
     And I am signed in
