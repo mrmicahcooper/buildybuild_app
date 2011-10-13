@@ -1,0 +1,6 @@
+%h2= "Posts for #{page.name.titleize}"
+%ul
+- posts.each do |post|
+  %li
+    = link_to post.title, post_path(post)
+    %span.small.grey=  post.created_at.to_s(:pretty)
