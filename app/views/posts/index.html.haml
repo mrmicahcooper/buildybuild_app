@@ -2,5 +2,5 @@
 %ul
 - posts.each do |post|
   %li
-    = link_to post.title, post_path(post)
+    = link_to post.title, edit_page_post_path(page, post)
     %span.small.grey=  post.created_at.to_s(:pretty)

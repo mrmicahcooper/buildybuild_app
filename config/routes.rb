@@ -9,7 +9,7 @@ Buildybuild::Application.routes.draw do
   resources :users, exclude: [:update, :delete, :show, :index]
   resources :sessions, only: [:new, :create, :destroy]
   resources :pages, exclude: [:index] do
-    resources :posts, only: [:index, :new]
+    resources :posts, only: [:index, :new, :edit]
   end
   resources :posts
   resource :website_settings, only: [:edit, :update]

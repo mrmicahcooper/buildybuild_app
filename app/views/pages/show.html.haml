@@ -3,7 +3,7 @@
   = render 'layouts/sub_links'
   - unless current_page.body.blank?
     %article= format(current_page.body)
-  - posts.each do |post|
+  - published_posts.each do |post|
     %article
       .flight.small.grey= "published: #{(post.published_at || post.created_at).to_s(:pretty)}"
       %h4.inlined= post.title
