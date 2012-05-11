@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :body
 
-  scope :published, where('published_at <= now()')
+  scope :published, where('published_at <= now()').order("created_at DESC")
 
   def publish_date
     return Date.today.to_s(:pretty) if self.new_record?
